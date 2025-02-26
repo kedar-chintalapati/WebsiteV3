@@ -3,6 +3,5 @@ folium
 streamlit-folium
 requests
 xmltodict
-transformers
 torch
 pandas

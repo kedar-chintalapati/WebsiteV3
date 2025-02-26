@@ -13,7 +13,18 @@ import time
 
 # For AI Chatbot
 # Make sure to install: pip install transformers
-from transformers import pipeline
+#from transformers import pipeline
+
+st.set_page_config(
+    page_title="Cancer Support App",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+    menu_items={
+        'Get Help': None,
+        'Report a bug': None,
+        'About': None
+    }
+)
 
 # Set up a local Question-Answering pipeline (distilbert-based)
 # This model is small enough to run locally without API keys.
@@ -31,16 +42,7 @@ nlp_qa = load_qa_pipeline()
 # PAGE CONFIG & GLOBAL STYLING
 ###############################
 # Hide Streamlit's default menu and footer
-st.set_page_config(
-    page_title="Cancer Support App",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-    menu_items={
-        'Get Help': None,
-        'Report a bug': None,
-        'About': None
-    }
-)
+
 
 # Custom CSS to remove default Streamlit elements and apply a dark theme
 custom_css = """
